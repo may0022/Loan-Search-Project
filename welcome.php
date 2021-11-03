@@ -8,7 +8,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 ?>
- 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -19,10 +18,30 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
-    <p>
-        <a href="reset-password.php" class="btn-readmore">Reset Your Password</a>
-        <a href="logout.php" class="btn-readmore">Sign Out of Your Account</a>
-    </p>
+	<nav>
+        <div id="logo-img">
+            <a href="home.php">
+                <img src="img/logo1.png" alt="Loan Search">
+            </a>
+        </div>
+    </nav>
+		
+		<main>
+			<div class="outside"></div>
+					<div class="wrapper2">
+						<h1>Welcome</h1>
+						<h2>Hi,<?php echo htmlspecialchars($_SESSION["username"]); ?>. This is your Loan Search account!</h2>
+								<div>
+									<p><a href="reset-password.php" class="btn-readmore">Reset Your Password</a> <a href="logout.php" class="btn-readmore">Sign Out of Your Account</a></p>
+								</div>
+					</div>
+			<div class="outside2"></div>
+		</main>
+	
+	<footer id="footer">
+            <div id="right-footer">
+                <p>Website Developed by KMZ</p>
+            </div>
+    </footer>
 </body>
 </html>

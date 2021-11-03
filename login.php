@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id, username, password FROM users WHERE username = ?";
+        $sql = "SELECT userid, username, password FROM user WHERE username = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -51,7 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Check if username exists, if yes then verify password
                 if(mysqli_stmt_num_rows($stmt) == 1){                    
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $userid, $username, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
@@ -59,7 +59,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
+                            $_SESSION["userid"] = $userid;
                             $_SESSION["username"] = $username;                            
                             
                             // Redirect user to welcome page
@@ -100,21 +100,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 
 <body>
-    <div id="slideout-menu">
-        <ul>
-            <li>
-                <a href="home.php">Home</a>
-            </li>
-            <li>
-                <a href="about.php">About</a>
-            </li>
-        </ul>
-    </div>
-
     <nav>
         <div id="logo-img">
-            <a href="#">
-                <img src="img/logo.png" alt="Loan Search">
+            <a href="home.php">
+                <img src="img/logo1.png" alt="Loan Search">
             </a>
         </div>
         <div id="menu-icon">
@@ -137,7 +126,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			<div class="wrapper">
 				<h2 class="section-heading">Login</h2>
 				<p>Please fill in your credentials to login.</p>
-					<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+					<form action="login.php" method="post">
 						<div class="form-group">	
 							<input type="text" name="username" placeholder="Username" class="form-control<?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
 						<span class= "invalid-feedback"><?php echo $username_err; ?></span>
@@ -168,7 +157,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <a href="login.php">Login</a>
                         </li>
 						<li>
-                            <a href="questionaire.php">Questionaire</a>
+                            <a href="questionnaire.php">Questionnaire</a>
                         </li>
 						<li>
                             <a href="register.php">Make account</a>

@@ -13,7 +13,7 @@
 <body>
     <nav>
         <div id="logo-img">
-            <a href="#">
+            <a href="home.php">
                 <img src="img/logo.png" alt="Loan Search">
             </a>
         </div>
@@ -66,7 +66,7 @@
 								<a href="login.php">Login</a>
 							</li>
 							<li>
-								<a href="questionaire.php">Questionaire</a>
+								<a href="questionnaire.php">Questionnaire</a>
 							</li>
 							<li>
 								<a href="register.php">Make account</a>

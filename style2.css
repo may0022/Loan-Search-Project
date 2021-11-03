@@ -171,6 +171,7 @@ section {
   margin: 8px;
   text-align: center;
 }
+
 /*Wrapper*/
 
 .outside{
@@ -187,6 +188,14 @@ section {
 	border: 2px solid #000;
 	text-align: center;
 }
+.wrapper2{ 
+	margin:auto;
+	width: 800px;
+	padding: 40px 40px; 
+	display: relative;
+	border: 2px solid #000;
+	text-align: center;
+}
 .wrapper a{
 	color: #36856E;
 }
@@ -196,6 +205,7 @@ section {
 	text-align: center;
 	border: 2px solid #000;
 }
+
 
 .form-group input{
 	width : 200px;

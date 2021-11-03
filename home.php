@@ -10,11 +10,10 @@
 </head>
 
 <body>
-
     <nav>
         <div id="logo-img">
-            <a href="#">
-                <img src="img/logo.png" alt="Loan Search">
+            <a href="home.php">
+                <img src="img/logo1.png" alt="Loan Search">
             </a>
         </div>
         <div id="menu-icon">
@@ -40,7 +39,7 @@
 			<section>
 			<div class="wrapper-home">    
 						  <p>If you would like to go directily to matching without an account you can continue here:</p>
-						<a href="questionaire.php" class="btn-readmore">Start as Guest</a>			
+						<a href="questionnaire.php" class="btn-readmore">Start as Guest</a>			
 			</div>	 
 			<div class="wrapper-home">
 						  <p>If you would like to check your results again from your account you can continue here:</p>  
@@ -63,7 +62,7 @@
                             <a href="login.php">Login</a>
                         </li>
 						<li>
-                            <a href="questionaire.php">Questionaire</a>
+                            <a href="questionnaire.php">Questionnaire</a>
                         </li>
 						<li>
                             <a href="register.php">Make account</a>
