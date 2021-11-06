@@ -78,26 +78,40 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-    <div class="wrapper">
-        <h2>Reset Password</h2>
-        <p>Please fill out this form to reset your password.</p>
-			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
-				<div class="form-group">
-					<input type="password" name="new_password" placeholder="New Password" class="form-control <?php echo (!empty($new_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $new_password; ?>">
-					<span class="invalid-feedback"><?php echo $new_password_err; ?></span>
-				</div>
-				<div class="form-group">
-					<input type="password" name="confirm_password" placeholder="Confirm Password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
-					<span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
-				</div>
-				<div class="form-group">
-					<input type="submit" class="btn-look" value="Submit">
-					<a class="btn" href="welcome.php">Cancel</a>
-				</div>
-			</form>
-    </div>    
+	<nav>
+        <div id="logo-img">
+            <a href="home.php">
+                <img src="img/logo1.png" alt="Loan Search">
+            </a>
+        </div>
+    </nav>
+		
+		<main>
+			<div class="outside"></div>
+			<center><div class="wrapper-home">
+					<h2 class="section-heading">Reset Password</h2>
+					<p>Please fill out this form to reset your password.</p>
+						<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
+							<div class="form-group">
+								<input type="password" name="new_password" placeholder="New Password" class="form-control <?php echo (!empty($new_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $new_password; ?>">
+								<span class="invalid-feedback"><?php echo $new_password_err; ?></span>
+							</div>
+							<div class="form-group">
+								<input type="password" name="confirm_password" placeholder="Confirm Password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
+								<span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+							</div>
+							<div>
+								<p>
+									<input type="submit" class="btn-readmore" value="Submit">
+									<a class="btn-readmore" href="welcome.php">Cancel</a>
+								</p>
+							</div>
+						</form>
+					</div></center>
+			<div class="outside2"></div>	  
+	</main>
 </body>
 </html>

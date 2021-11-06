@@ -14,7 +14,7 @@
     <nav>
         <div id="logo-img">
             <a href="home.php">
-                <img src="img/logo.png" alt="Loan Search">
+                <img src="img/logo1.png" alt="Loan Search">
             </a>
         </div>
         <div id="menu-icon">
@@ -37,13 +37,16 @@
     </div>
 	
     <main>
-        <h2 class="section-heading">About This Site</h2>
+        <div>
+		<h2 class="section-heading">About This Site</h2>
 			<section id="section-source">
 				<p>
 					Here is where I'll type info about what the site is meant for and for git hub info
 				</p>
 			</section>
+		</div>
 		
+		<div>
 		<h2 class="section-heading">Source Code</h2>
 			<section id="section-source">
 				<p>
@@ -52,6 +55,9 @@
 				</p>
 				<a href="#" class="btn-readmore">GitHub Profile</a>
 			</section>
+		</div>	
+		
+		<div class="outside2"></div>	
    </main>
   
     <footer id="footer">

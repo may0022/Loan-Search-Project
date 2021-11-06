@@ -8,6 +8,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 ?>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,7 +16,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
 	<nav>
@@ -29,11 +30,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<main>
 			<div class="outside"></div>
 					<div class="wrapper2">
-						<h1>Welcome</h1>
-						<h2>Hi,<?php echo htmlspecialchars($_SESSION["username"]); ?>. This is your Loan Search account!</h2>
+						<h1 class="section-heading">Welcome</h1>
+						<center><h2>Hi,<?php echo htmlspecialchars($_SESSION["username"]); ?>. This is your Loan Search account!</h2>
 								<div>
-									<p><a href="reset-password.php" class="btn-readmore">Reset Your Password</a> <a href="logout.php" class="btn-readmore">Sign Out of Your Account</a></p>
-								</div>
+									<p><a href="matches.html" class="btn-readmore">Review Matches</a> <a href="reset-password.php" class="btn-readmore">Reset Your Password</a> <a href="logout.php" class="btn-readmore">Sign Out of Your Account</a></p>
+								</div></center>
 					</div>
 			<div class="outside2"></div>
 		</main>
