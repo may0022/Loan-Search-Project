@@ -33,7 +33,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						<h1 class="section-heading">Welcome</h1>
 						<center><h2>Hi,<?php echo htmlspecialchars($_SESSION["username"]); ?>. This is your Loan Search account!</h2>
 								<div>
-									<p><a href="matches.html" class="btn-readmore">Review Matches</a> <a href="reset-password.php" class="btn-readmore">Reset Your Password</a> <a href="logout.php" class="btn-readmore">Sign Out of Your Account</a></p>
+									<p><a href="matches1.html" class="btn-readmore">Review Matches</a> <a href="reset-password.php" class="btn-readmore">Reset Your Password</a> <a href="logout.php" class="btn-readmore">Sign Out of Your Account</a></p>
 								</div></center>
 					</div>
 			<div class="outside2"></div>
